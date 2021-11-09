@@ -29,11 +29,6 @@ nav {
   font-family: Glitten;
 }
 
-.nav-logo h4{
-  font-weight: lighter;
-  font-size: 1.25rem;
-}
-
 nav ul {
   display: flex;
   justify-content: space-between;
@@ -122,17 +117,17 @@ footer {
 }
 
 .footer-logo {
-  padding-left: 5vw;
-  padding-top: 5vh;
+  padding-left: 2vw;
+  padding-top: 7vh;
 }
 
 .footer-logo img {
-  width: 25%;
+  width: 30%;
 }
 
 .footer-content {
   color: #f2f2f2;
-  padding-right: 5vw;
+  padding-right: 2vw;
   padding-top: 5vh;
   text-align: right;
   width: 50%;
@@ -190,10 +185,6 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
-  .nav-logo h4{
-    font-size: 0.8rem;
-  }
-  
   nav ul {
     width: 50%;
     font-size: 0.8rem;
