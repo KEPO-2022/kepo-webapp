@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href='{% static "css/styleIndex.css" %}'>
+    <title>KEPO 2022 | Landing Page</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <h4>KEPO 2022</h4>
+      </div>
+      <ul>
+        <li>
+          <a href="#">Booklet</a>
+        </li>
+
+        <li>
+          <a href="#">Merch</a>
+        </li>
+
+        <li>
+          <a href="#">About Us</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="landing-content section1">
+      <div class="logo">
+        <img src="{% static 'images/logo_with_text.png' %}" alt="KEPO 2022">
+      </div>
+
+      <div class="countdown-display">
+        <div class="days">
+          <span>1</span>
+          <span>2</span>
+          <p>D</p>
+        </div>
+
+        <div class="hours">
+          <span>1</span>
+          <span>2</span>
+          <p>H</p>
+        </div>
+
+        <div class="minutes">
+          <span>1</span>
+          <span>2</span>
+          <p>M</p>
+        </div>
+
+        <div class="seconds">
+          <span>1</span>
+          <span>2</span>
+          <p>S</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-logo">
+        <img src="{% static 'images/logo_footer.png' %}" alt="logo" />
+      </div>
+      <div class="footer-content">
+        <p>Find us on media social</p>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin-square"></i></a>
+        <p>©2021 Kedubes Expo 2022</p>
+      </div>
+    </footer>
+  </body>
+</html>
