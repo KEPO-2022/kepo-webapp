@@ -85,10 +85,12 @@ WSGI_APPLICATION = 'kepo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': os.path.join(BASE_DIR, 'my.cnf'),
-        },
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'kepo_2022',
+        'USER': 'kepo_2022',
+        'PASSWORD': 'kepo_2022',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
