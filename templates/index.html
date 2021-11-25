@@ -4,6 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="description" content="Kedubes EXPO 2022" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -61,14 +62,138 @@
         </div>
       </div>
     </section>
+    
+    <section class="landing-content section2">
+      <!-- Judul "Timeline" sub title di landing page -->
+      <div class="title">
+        <img src="{% static 'images/star.png' %}" />
+        <h2>Timeline</h2>
+        <img src="{% static 'images/star.png' %}" />
+      </div>
+
+      <!-- Container dari baris list timeline -->
+      <div class="timeline-content">
+        <svg height="100%" width="6">
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" style="stop-color: #f2f2f2; stop-opacity: 1" />
+              <stop offset="100%" style="stop-color: #8fb2de; stop-opacity: 1" />
+            </linearGradient>
+          </defs>
+          <line x1="0" y1="0" x2="0" y2="100%" style="stroke: url(#grad1); stroke-width: 8" />
+          Sorry, your browser does not support inline SVG.
+        </svg>
+
+        <div class="list-point-circle">
+          <svg width="32" height="32">
+            <defs>
+              <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: #f2f2f2; stop-opacity: 1" />
+                <stop offset="100%" style="stop-color: #8fb2de; stop-opacity: 1" />
+              </linearGradient>
+            </defs>
+            <circle cx="16" cy="16" r="14px" stroke="url(#grad2)" stroke-width="4" fill="#222b54" />
+            Sorry, your browser does not support inline SVG.
+          </svg>
+
+          <svg width="32" height="32">
+            <defs>
+              <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: #f2f2f2; stop-opacity: 1" />
+                <stop offset="100%" style="stop-color: #8fb2de; stop-opacity: 1" />
+              </linearGradient>
+            </defs>
+            <circle cx="16" cy="16" r="14px" stroke="url(#grad2)" stroke-width="4" fill="#222b54" />
+            Sorry, your browser does not support inline SVG.
+          </svg>
+
+          <svg width="32" height="32">
+            <defs>
+              <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: #f2f2f2; stop-opacity: 1" />
+                <stop offset="100%" style="stop-color: #8fb2de; stop-opacity: 1" />
+              </linearGradient>
+            </defs>
+            <circle cx="16" cy="16" r="14px" stroke="url(#grad2)" stroke-width="4" fill="#222b54" />
+            Sorry, your browser does not support inline SVG.
+          </svg>
+
+          <svg width="32" height="32">
+            <defs>
+              <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: #f2f2f2; stop-opacity: 1" />
+                <stop offset="100%" style="stop-color: #8fb2de; stop-opacity: 1" />
+              </linearGradient>
+            </defs>
+            <circle cx="16" cy="16" r="14px" stroke="url(#grad2)" stroke-width="4" fill="#222b54" />
+            Sorry, your browser does not support inline SVG.
+          </svg>
+
+          <svg width="32" height="32">
+            <defs>
+              <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: #f2f2f2; stop-opacity: 1" />
+                <stop offset="100%" style="stop-color: #8fb2de; stop-opacity: 1" />
+              </linearGradient>
+            </defs>
+            <circle cx="16" cy="16" r="14px" stroke="url(#grad2)" stroke-width="4" fill="#222b54" />
+            Sorry, your browser does not support inline SVG.
+          </svg>
+        </div>
+
+        <div class="timeline-date">
+          <ul>
+            <li>
+              <h4>Pembukaan</h4>
+              <p>Senin, xx xx xxxx</p>
+            </li>
+
+            <li>
+              <h4>Acara</h4>
+              <p>Senin, xx xx xxxx</p>
+            </li>
+
+            <li>
+              <h4>Acara</h4>
+              <p>Senin, xx xx xxxx</p>
+            </li>
+
+            <li>
+              <h4>Acara</h4>
+              <p>Senin, xx xx xxxx</p>
+            </li>
+
+            <li>
+              <h4>Acara</h4>
+              <p>Senin, xx xx xxxx</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="functional">
+        <div class="button-att">
+          <a href="#"><button>Attendance</button></a>
+          <a href="#"><button>Join Conference</button></a>
+        </div>
+
+        <div class="title2">
+          <img src="{% static 'images/star.png' %}" />
+          <h2>Standar Operasional Prosedur</h2>
+          <img src="{% static 'images/star.png' %}" />
+        </div>
+        <p>Peserta KEPO 2022 diharapkan dapat mengikuti SOP berikut</p>
+        <a href="#"><button>Download SOP</button></a>
+      </div>
+    </section>
 
     <footer>
       <div class="footer-logo">
         <img src="{% static 'images/logo_footer.png' %}" alt="logo" />
       </div>
       <div class="footer-content">
-        <p>Find us on media social</p>
-        <a href="#"><i class="fa fa-instagram"></i></a>
+        <p>Find us on social media</p>
+        <a href="https://www.instagram.com/kepokedubes/" target="_blank"><i class="fa fa-instagram"></i></a>
         <a href="#"><i class="fa fa-linkedin-square"></i></a>
         <p>©2021 Kedubes Expo 2022</p>
       </div>
