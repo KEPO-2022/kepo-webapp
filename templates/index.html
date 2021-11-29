@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href='{% static "css/styleIndex.css" %}'>
     <title>KEPO 2022 | Landing Page</title>
   </head>
@@ -62,8 +63,10 @@
         </div>
       </div>
     </section>
+
     
     <section class="landing-content section2">
+      <div data-aos="fade-up">
       <!-- Judul "Timeline" sub title di landing page -->
       <div class="title">
         <img src="{% static 'images/star.png' %}" />
@@ -184,8 +187,9 @@
         </div>
         <p>Peserta KEPO 2022 diharapkan dapat mengikuti SOP berikut</p>
         <a href="#"><button>Download SOP</button></a>
-      </div>
+      </div></div>
     </section>
+  
 
     <footer>
       <div class="footer-logo">
@@ -199,5 +203,7 @@
       </div>
     </footer>
     <script src="{% static 'js/countdown.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
   </body>
 </html>
