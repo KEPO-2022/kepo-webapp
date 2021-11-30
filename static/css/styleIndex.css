@@ -16,23 +16,36 @@ body {
 
 /* --Style for nav container-- */
 nav {
-  width: 100%;
-  height: 9vh;
-  background-color: transparent;
+  width: 90%;
+  height: 7vh;
+  background-color: #F2F2F2;
   position: fixed;
-  color: #f2f2f2;
+  top: 3%;
+  left: 5%;
+  color: #222B54;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5vw;
+  padding: 0 5vw 0 2vw;
   box-sizing: border-box;
   z-index: 99;
   font-family: Glitten;
 }
 
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo > img {
+  width: 40px;
+  height: 40px;
+}
+
 .nav-logo h4 {
   font-weight: lighter;
-  font-size: 1.25rem;
+  line-height: 1;
+  font-size: 0.9rem;
 }
 
 nav ul {
@@ -45,7 +58,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #f2f2f2;
+  color: #222B54;
 }
 /* Akhir bagian Navbar */
 
