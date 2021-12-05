@@ -29,7 +29,7 @@
 body {
   font-family: Poppins, sans-serif;
   overflow-x: hidden;
-  background-image: url("../assets/bg_info.png");
+  background-image: url("../images/bg_info.png");
   background-position: center;
   background-size: 100% 100%;
 }
