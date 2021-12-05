@@ -189,7 +189,7 @@ section.section1 {
 footer {
   width: 100%;
   height: 20vh;
-  background-color: #222b54;
+  background-color: transparent;
   display: flex;
   box-sizing: border-box;
   overflow: hidden;
