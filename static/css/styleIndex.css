@@ -16,23 +16,36 @@ body {
 
 /* --Style for nav container-- */
 nav {
-  width: 100%;
-  height: 9vh;
-  background-color: transparent;
+  width: 90%;
+  height: 7vh;
+  background-color: #F2F2F2;
   position: fixed;
-  color: #f2f2f2;
+  top: 3%;
+  left: 5%;
+  color: #222B54;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5vw;
+  padding: 0 5vw 0 2vw;
   box-sizing: border-box;
   z-index: 99;
   font-family: Glitten;
 }
 
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo > img {
+  width: 40px;
+  height: 40px;
+}
+
 .nav-logo h4 {
   font-weight: lighter;
-  font-size: 1.25rem;
+  line-height: 1;
+  font-size: 0.9rem;
 }
 
 nav ul {
@@ -45,7 +58,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #f2f2f2;
+  color: #222B54;
 }
 /* Akhir bagian Navbar */
 
@@ -121,6 +134,7 @@ section.landing-content.section2 {
   width: 100%;
   background-color: #222b54;
   box-sizing: border-box;
+  position: relative;
 }
 
 .section2 .title,
@@ -143,6 +157,48 @@ section.landing-content.section2 .title h2,
   font-weight: normal;
   padding: 0 3vw;
   font-size: 36px;
+}
+
+img.cloud-left {
+  position: absolute;
+  display: block;
+  width: 25vw;
+  left: 0;
+}
+
+img.cl-1 {
+  top: 30%;
+}
+
+img.cl-2 {
+  top: 70%;
+  left: -2%;
+}
+
+img.cl-3 {
+  width: 30vw;
+  top: 87%;
+}
+
+img.cloud-right {
+  position: absolute;
+  display: block;
+  width: 25vw;
+  right: 0;
+}
+
+img.cr-1 {
+  top: 20%;
+}
+
+img.cr-2 {
+  top: 30%;
+  right: -2%;
+}
+
+img.cr-3 {
+  top: 55%;
+  width: 40vw;
 }
 
 .section2 .timeline-content {
@@ -305,6 +361,9 @@ footer {
   }
 
   /* Section 2 */
+  img.cl-2 {
+    top: 75%;
+  }
   /* Tampilan teks timeline */
   .timeline-content ul {
     width: 60vw;
@@ -375,6 +434,9 @@ footer {
   }
 
   /* Section 2 - Timeline*/
+  img.cl-2 {
+    top: 80%;
+  }
   /* Tampilan Teks Timeline */
   section.landing-content.section2 {
     padding-left: 5vw;
