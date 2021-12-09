@@ -58,7 +58,7 @@ nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
+  width: 20%;
   list-style: none;
 }
 
@@ -340,8 +340,22 @@ footer {
 }
 /* Akhir bagian Footer */
 
+@media screen and (max-width: 1072px) {
+  nav ul {
+    width: 30%;
+  }
+}
+
 /* Media Query for responsive */
 @media screen and (max-width: 918px) {
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    list-style: none;
+  }
+
   .countdown-display {
     width: 80%;
     justify-content: center;
