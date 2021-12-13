@@ -1,5 +1,5 @@
 const countDown = () => {
-  const countDate = new Date("December 10, 2021 00:00:00").getTime(); //Set waktu untuk akhir countdown
+  const countDate = new Date("January 17, 2022 00:00:00").getTime(); //Set waktu untuk akhir countdown
   const now = new Date().getTime(); //Set waktu untuk saat ini
   const gap = countDate - now; // Hitung selisih waktu dalam ms
 
