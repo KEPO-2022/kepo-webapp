@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="stylesheet/styleInfo.css" />
+    <link rel="stylesheet" href="{% static 'css/styleInfo.css' %}" />
     <title>Info Perguruan Tinggi</title>
   </head>
   <body>
@@ -19,7 +19,7 @@
       </div>
       <ul>
         <li>
-          <a href="infoptn.html">Info PT</a>
+          <a href="infoptn.html">Info</a>
         </li>
 
         <li>
@@ -34,7 +34,7 @@
 
     <section class="section1">
       <div class="title">
-        <img src="{% static 'assets/star.png' %}" />
+        <img src="{% static 'images/star.png' %}" />
         <h2>Jalur Masuk PTN</h2>
       </div>
 
@@ -42,7 +42,7 @@
         <div class="card">
           <a href="#">
             <div class="thumbnail">
-              <img src="{% static 'images/logo.png' %}" alt="thumbnail" />
+              <img src="{% static 'images/snmptn.png' %}" alt="SNMPTN" />
             </div>
             <div class="text">
               <h4>Jalur SNMPTN</h4>
@@ -53,10 +53,10 @@
         <div class="card">
           <a href="#">
             <div class="thumbnail">
-              <img src="{% static 'images/logo.png' %}" alt="thumbnail" />
+              <img src="{% static 'images/sbmptn.png' %}" alt="SBMPTN" />
             </div>
             <div class="text">
-              <h4>Jalur SNMPTN</h4>
+              <h4>Jalur SBMPTN</h4>
             </div>
           </a>
         </div>
@@ -64,10 +64,10 @@
         <div class="card">
           <a href="#">
             <div class="thumbnail">
-              <img src="{% static 'images/logo.png' %}" alt="thumbnail" />
+              <img src="{% static 'images/mandiri.png' %}" alt="Jalur Mandiri" />
             </div>
             <div class="text">
-              <h4>Jalur SNMPTN</h4>
+              <h4>Jalur Mandiri</h4>
             </div>
           </a>
         </div>
@@ -75,10 +75,21 @@
         <div class="card">
           <a href="#">
             <div class="thumbnail">
-              <img src="{% static 'images/logo.png' %}" alt="thumbnail" />
+              <img src="{% static 'images/ppkb.png' %}" alt="PPKB UI" />
             </div>
             <div class="text">
-              <h4>Jalur SNMPTN</h4>
+              <h4>PPKB UI</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="#">
+            <div class="thumbnail">
+              <img src="{% static 'images/iup.png' %}" alt="IUP" />
+            </div>
+            <div class="text">
+              <h4>IUP</h4>
             </div>
           </a>
         </div>
@@ -95,10 +106,10 @@
         <div class="more">
           <img src="{% static 'images/ltmpt.png' %}" alt="LTMPT" />
           <p>Informasi lebih lanjut dapat dilihat pada:</p>
-          <a href="">
+          <a href="#">
             <button>https://ltmpt.ac.id</button>
           </a>
-          <a href="">
+          <a href="#">
             <button><i class="fa fa-instagram"></i> @ltmptofficial</button>
           </a>
         </div>
@@ -117,7 +128,7 @@
               <img src="{% static 'images/logo.png' %}" alt="thumbnail" />
             </div>
             <div class="text">
-              <h4>Jalur SNMPTN</h4>
+              <h4>Kepoin Yuk! #1</h4>
             </div>
           </a>
         </div>
@@ -128,7 +139,7 @@
               <img src="{% static 'images/logo.png' %}" alt="thumbnail" />
             </div>
             <div class="text">
-              <h4>Jalur SNMPTN</h4>
+              <h4>Video Series #1</h4>
             </div>
           </a>
         </div>
@@ -139,7 +150,7 @@
               <img src="{% static 'images/logo.png' %}" alt="thumbnail" />
             </div>
             <div class="text">
-              <h4>Jalur SNMPTN</h4>
+              <h4>Kepoin Yuk! #2</h4>
             </div>
           </a>
         </div>
@@ -150,29 +161,25 @@
               <img src="{% static 'images/logo.png' %}" alt="thumbnail" />
             </div>
             <div class="text">
-              <h4>Jalur SNMPTN</h4>
+              <h4>Video Series #2</h4>
             </div>
           </a>
         </div>
       </div>
 
-      <div class="ltmpt">
-        <div class="info-ltmpt">
-          <h2>Info LTMPT</h2>
+      <div class="track">
+        <img src="{% static 'images/cava-track-record.png' %}" alt="Cava" />
+        <div class="track-record">
+          <h2>Track Record</h2>
           <br />
-          <p>Update - xx/xx/xxxx</p>
-          <p>Timeline dari pembuatan akun LTMPT hingga pengumuman SNMPTN 2022.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, ducimus minus! Laborum, sed cumque nihil adipisci animi, corrupti inventore voluptatem odit nesciunt reprehenderit sint laboriosam? Tempora laboriosam
+            repellendus eligendi nostrum harum reiciendis officiis corporis magnam beatae aliquam? Et, nihil. In tenetur architecto excepturi aspernatur reprehenderit.
+          </p>
           <a href="#"><button>Download PDF</button></a>
         </div>
-        <div class="more">
-          <img src="{% static 'images/ltmpt.png' %}" alt="LTMPT" />
-          <p>Informasi lebih lanjut dapat dilihat pada:</p>
-          <a href="">
-            <button>https://ltmpt.ac.id</button>
-          </a>
-          <a href="">
-            <button><i class="fa fa-instagram"></i> @ltmptofficial</button>
-          </a>
+        <div class="decor-track">
+          <img src="{% static 'images/decor-for-track.PNG' %}" alt="track-record" />
         </div>
       </div>
     </section>
