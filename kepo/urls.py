@@ -18,9 +18,10 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from kepo_app.views import IndexView
+from kepo_app.views import IndexView, InfoPtnView
 
 urlpatterns = [
     path('', IndexView.as_view(), name="index"),
+    path('info_ptn/', InfoPtnView.as_view(), name="info_ptn"),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
