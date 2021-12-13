@@ -39,8 +39,12 @@
       </ul>
     </nav>
 
-    <section>
-        <!-- {csrftoken} -->
+    <section class="section1">
+        <form method = "post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Upload</button>
+        </form>
     </section>
     
     <footer>
