@@ -18,10 +18,17 @@ class Category(models.Model):
         return self.name
 
 class Article(models.Model):
-    title = models.CharField(max_length=250, unique=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200, unique=True)
+    thumbnail = models.ImageField(upload_to='images/thumbnail/', default='album_logos/no-image.jpg')
     slug = models.SlugField(unique=True)
-    thumbnail = models.ImageField()
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super(Category, self).save(*args, **kwargs)
+
+    class Meta:
+        verbose_name_plural = 'Articles'
+
+    def __str__(self):
+        return self.title
