@@ -1,3 +1,22 @@
 from django import forms
+from kepo_app.models import Category, Article
+from django.core.exceptions import ValidationError
 
-# Create your forms here.
+class CategoryForm(forms.ModelForm):
+    name = forms.CharField(
+        max_length=Category._meta.get_field("name").max_length, help_text="Enter the category name!",)
+    slug = forms.CharField(widget=forms.HiddenInput(), required=False)
+    
+    class Meta:
+        model = Category
+        fields = ('name',)
+
+class ArticleForm(forms.ModelForm):
+    title = forms.CharField(
+        max_length=Category._meta.get_field("name").max_length, help_text="Enter the category name!",
+    )
+    content = forms.CharField(widget=forms.Textarea, help_text="Please enter the content!",)
+    slug = forms.CharField(widget=forms.HiddenInput(), required=False)
+    class Meta:
+        model = Article
+        fields = ("title", "content", "thumbnail")

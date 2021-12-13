@@ -12,4 +12,4 @@ class InfoPtnView(View):
 
 class InfoPtnEdit(View):
     def get(self, request):
-        return render(request, 'edit_info_ptn.html', {})
+        return render(request, 'infoptn_edit.html', {})
