@@ -13,10 +13,10 @@ class CategoryForm(forms.ModelForm):
 
 class ArticleForm(forms.ModelForm):
     title = forms.CharField(
-        max_length=Category._meta.get_field("name").max_length, help_text="Enter the category name!",
+        max_length=Article._meta.get_field("title").max_length, help_text="Title",
     )
-    content = forms.CharField(widget=forms.Textarea, help_text="Please enter the content!",)
+    content = forms.CharField(widget=forms.Textarea, help_text="Content",)
     slug = forms.CharField(widget=forms.HiddenInput(), required=False)
     class Meta:
         model = Article
-        fields = ("title", "content", "thumbnail")
+        fields = ("title", "thumbnail", "content", )

@@ -24,7 +24,7 @@ class Article(models.Model):
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
-        super(Category, self).save(*args, **kwargs)
+        super(Article, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name_plural = 'Articles'
