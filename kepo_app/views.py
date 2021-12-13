@@ -12,7 +12,10 @@ class IndexView(View):
 
 class InfoPtnView(View):
     def get(self, request):
-        return render(request, 'infoptn.html', {})
+        ctx = {}
+        article_list = Article.objects.order_by('title')[:5]
+        ctx['article_list'] = article_list
+        return render(request, 'infoptn.html', ctx)
     
     # def post(self, request):
     #     form = CategoryForm(request.POST, request.FILES)
@@ -37,7 +40,7 @@ class InfoPtnEdit(View):
             category = Category.objects.get(id=int(id))
         except:
             category= None
-        form = ArticleForm(request.POST)
+        form = ArticleForm(request.POST, request.FILES)
         if form.is_valid():
             if category:
                 article = form.save(commit=False)

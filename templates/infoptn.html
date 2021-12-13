@@ -123,6 +123,18 @@
         <h2>Konten Edukatif</h2>
       </div>
       <div class="wrapper">
+        {% for article in article_list %}
+        <div class="card">
+          <a href="#">
+            <div class="thumbnail">
+              <img src="{% static 'images/logo.png' %}" alt="thumbnail" />
+            </div>
+            <div class="text">
+              <h4>{{article.title}}</h4>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
         <div class="card">
           <a href="#">
             <div class="thumbnail">

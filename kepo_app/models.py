@@ -19,7 +19,8 @@ class Category(models.Model):
 class Article(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=200, unique=True)
-    thumbnail = models.ImageField(upload_to='images/thumbnail/', default='album_logos/no-image.jpg')
+    thumbnail = models.ImageField(upload_to='images/thumbnail/')
+    content = models.TextField()
     slug = models.SlugField(unique=True)
 
     def save(self, *args, **kwargs):
