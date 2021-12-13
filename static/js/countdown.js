@@ -62,4 +62,5 @@ if (countDown() >= 0) {
   setInterval(countDown, 1000);
 } else {
   clearInterval(countDown);
+  $(".countdown-display").css("display", "none");
 }
