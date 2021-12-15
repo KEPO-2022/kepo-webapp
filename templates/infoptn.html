@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,8 +38,19 @@
         <img src="{% static 'images/star.png' %}" />
         <h2>Jalur Masuk PTN</h2>
       </div>
-
       <div class="wrapper">
+        {% for article in jalur_masuk_ptn %}
+        <div class="card">
+          <a href="{% url 'article' article.slug %}">
+            <div class="thumbnail">
+              <img src="../media/{{article.thumbnail}}" alt="thumbnail" />
+            </div>
+            <div class="text">
+              <h4>{{article.title}}</h4>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
         <div class="card">
           <a href="#">
             <div class="thumbnail">
@@ -122,6 +134,18 @@
         <h2>Konten Edukatif</h2>
       </div>
       <div class="wrapper">
+        {% for article in konten_edukatif %}
+        <div class="card">
+          <a href="{%url 'article' article.slug %}">
+            <div class="thumbnail">
+              <img src="../media/{{article.thumbnail}}" alt="thumbnail" />
+            </div>
+            <div class="text">
+              <h4>{{article.title}}</h4>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
         <div class="card">
           <a href="#">
             <div class="thumbnail">
