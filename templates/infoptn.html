@@ -39,9 +39,9 @@
         <h2>Jalur Masuk PTN</h2>
       </div>
       <div class="wrapper">
-        {% for article in info_masuk_ptn %}
+        {% for article in jalur_masuk_ptn %}
         <div class="card">
-          <a href="#">
+          <a href="{% url 'article' article.slug %}">
             <div class="thumbnail">
               <img src="../media/{{article.thumbnail}}" alt="thumbnail" />
             </div>
@@ -136,7 +136,7 @@
       <div class="wrapper">
         {% for article in konten_edukatif %}
         <div class="card">
-          <a href="#">
+          <a href="{%url 'article' article.slug %}">
             <div class="thumbnail">
               <img src="../media/{{article.thumbnail}}" alt="thumbnail" />
             </div>
