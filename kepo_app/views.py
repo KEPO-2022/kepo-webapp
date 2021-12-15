@@ -13,8 +13,11 @@ class IndexView(View):
 class InfoPtnView(View):
     def get(self, request):
         ctx = {}
-        article_list = Article.objects.order_by('title')[:5]
-        ctx['article_list'] = article_list
+        article_list_konten_edukatif = Article.objects.filter(category__name='Konten Edukatif')
+        article_list_info_masuk_ptn = Article.objects.filter(category__name='Info Masuk PTN')
+        # article_list = Article.objects.get()
+        ctx['konten_edukatif'] = article_list_konten_edukatif
+        ctx['info_masuk_ptn'] = article_list_info_masuk_ptn
         return render(request, 'infoptn.html', ctx)
     
     # def post(self, request):
@@ -49,3 +52,7 @@ class InfoPtnEdit(View):
         else:
             print(form.errors)
         return HttpResponseRedirect(reverse('info_ptn_edit'))
+
+class AdminLoginView(View):
+    def get(self, request):
+        return render(request, 'admin_login.html', {})
