@@ -59,17 +59,35 @@ footer {
   align-items: center;
 }
 
+@media screen and (max-width: 741px) {
+  .merch-poster {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .merch-poster {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
 @media screen and (max-width: 639px) {
   #title img {
     width: 2rem;
     height: 2rem;
   }
+}
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 613px) {
   .merch-poster {
-    margin-left: 0;
-    margin-right: 0;
+    display:block;
+    height: 90vh;
+    width: auto;
+    /* margin:auto; */
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
 
