@@ -68,6 +68,9 @@ class ArticleView(View):
             ctx['article'] = None
         return render(request, 'view_article.html', context=ctx)
         
+class MerchView(View):
+    def get(self, request):
+        return render(request, 'merch.html', {})
 
 class AdminLoginView(View):
     def get(self, request):
