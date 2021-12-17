@@ -1,38 +1,12 @@
+{% extends 'base.html' %} 
 {% load static %}
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="Kedubes EXPO 2022" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href='{% static "css/styleIndex.css" %}'>
-    <link rel="stylesheet" href='{% static "css/styleMerch.css" %}'>
-    <title>KEPO 2022 | Landing Page</title>
-  </head>
-  <body>
-    <nav>
-      <div class="nav-logo">
-        <img src="{% static 'images/logo.png' %}" alt="Kepo 2022" />
-        <h4>Kedubes<br />Expo</h4>
-      </div>
-      <ul>
-        <li>
-          <a href="/info_ptn">Info</a>
-        </li>
+{% block style %}
+<link rel="stylesheet" href='{% static "css/styleIndex.css" %}'>
+<link rel="stylesheet" href='{% static "css/styleMerch.css" %}'>
+{% endblock style %}
 
-        <li>
-          <a href="/merch">Merch</a>
-        </li>
-
-        <li>
-          <a href="#">About Us</a>
-        </li>
-      </ul>
-    </nav>
+{% block content %}
 
     <section class="landing-content merch">
       <div id="title">
@@ -65,10 +39,5 @@
       </div>
     </footer>
   </section>
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="{% static 'js/countdown.js' %}"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
-  </body>
-</html>
+{% endblock content %}
+{% block footer %}{% endblock footer %}
