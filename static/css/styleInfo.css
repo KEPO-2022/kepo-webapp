@@ -135,6 +135,7 @@ section.section1 {
   background-color: #ddd;
   border-radius: 25px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .card-after {
