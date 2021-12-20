@@ -137,6 +137,30 @@ section.section1 {
   box-sizing: border-box;
 }
 
+.card-after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1));
+  border-radius: 25px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.card-after > h1 {
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 2vw;
+}
+
+.card-after:hover {
+  opacity: 1;
+}
+
 .thumbnail > img {
   width: 60%;
   padding: 12px 12px;
@@ -192,6 +216,11 @@ section.section1 {
   margin-top: 36px;
 }
 
+.ltmpt button:hover,
+.track button:hover {
+  background-color: #ee4c4f;
+}
+
 .track > img {
   position: absolute;
   transform: translate(0%, -50%);
@@ -210,6 +239,11 @@ section.section1 {
   background-color: #222b54;
   color: #fff;
   font-weight: normal;
+}
+
+.more button:hover,
+.decor-track button:hover {
+  background-color: #36518f;
 }
 
 .more > img {
@@ -325,6 +359,10 @@ footer {
 
   .card {
     min-width: 50%;
+  }
+  
+  .card-after > h1 {
+    font-size: 5vw;
   }
 
   .text {

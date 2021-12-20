@@ -292,9 +292,21 @@ img.cr-3 {
   background-color: #e3eaaa;
 }
 
+.functional .button-att > a:first-child button:hover {
+  background-color: #f18163;
+}
+
+.functional .button-att > a:last-child button:hover {
+  background-color: #ccdb51;
+}
+
 .functional > a > button {
   background-color: #d2e0f2;
   margin-top: 24px;
+}
+
+.functional > a > button:hover {
+  background-color: #7dabe7;
 }
 
 .functional > p {
