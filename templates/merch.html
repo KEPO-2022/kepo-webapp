@@ -1,0 +1,43 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href='{% static "css/styleIndex.css" %}'>
+<link rel="stylesheet" href='{% static "css/styleMerch.css" %}'>
+{% endblock style %}
+
+{% block content %}
+
+    <section class="landing-content merch">
+      <div id="title">
+        <h5>Open PO</h5>
+        <div style="display: flex;">
+          <img id="star-left" src="{% static 'images/star.png' %}" />
+          <h1 style="margin: 0 1rem;">Official Merchandise</h1>
+          <img id="star-right" src="{% static 'images/star.png' %}" />
+        </div>
+      </div>
+      <div id="posters">
+        <img src="{% static 'images/Preorder-2-Bundle-Package.png' %}" alt="Poster 1" class="merch-poster">
+        <img src="{% static 'images/Preorder-2-non-bundle.png' %}" alt="Poster 2" class="merch-poster">
+      </div>
+      <div>
+        <a href="#"><button id="order-btn">Order Now</button></a>
+      </div>
+    
+  
+
+    <footer>
+      <div class="footer-logo">
+        <img src="{% static 'images/logo_footer.png' %}" alt="logo" />
+      </div>
+      <div class="footer-content">
+        <p>Find us on social media</p>
+        <a href="https://www.instagram.com/kepokedubes/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin-square"></i></a>
+        <p>©2021 Kedubes Expo 2022</p>
+      </div>
+    </footer>
+  </section>
+{% endblock content %}
+{% block footer %}{% endblock footer %}

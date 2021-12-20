@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from kepo_app.views import IndexView, InfoPtnView, InfoPtnEdit, AdminLoginView, ArticleView
+from kepo_app.views import IndexView, InfoPtnView, InfoPtnEdit, AdminLoginView, ArticleView, MerchView
 
 urlpatterns = [
     path('', IndexView.as_view(), name="index"),
@@ -26,5 +26,6 @@ urlpatterns = [
     path('info_ptn_edit/', InfoPtnEdit.as_view(), name="info_ptn_edit"),
     path('admin_login/', AdminLoginView.as_view(), name="admin_login"),
     path('article/<slug:article_slug>', ArticleView.as_view(), name="article"),
+    path('merch/', MerchView.as_view(), name="merch"),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

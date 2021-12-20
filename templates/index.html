@@ -1,38 +1,11 @@
+{% extends 'base.html' %} 
 {% load static %}
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="Kedubes EXPO 2022" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href='{% static "css/styleIndex.css" %}'>
-    <title>KEPO 2022 | Landing Page</title>
-  </head>
-  <body>
-    <nav>
-      <div class="nav-logo">
-        <img src="{% static 'images/logo.png' %}" alt="Kepo 2022" />
-        <h4>Kedubes<br />Expo</h4>
-      </div>
-      <ul>
-        <li>
-          <a href="#">Info</a>
-        </li>
-
-        <li>
-          <a href="#">Merch</a>
-        </li>
-
-        <li>
-          <a href="#">About Us</a>
-        </li>
-      </ul>
-    </nav>
-
+{% block style %}
+<link rel="stylesheet" href='{% static "css/styleIndex.css" %}'>
+{% endblock style %}
+    
+{% block content %}
     <section class="landing-content section1">
       <div class="logo">
         <img src="{% static 'images/logo_with_text.png' %}" alt="KEPO 2022">
@@ -68,6 +41,26 @@
     
     <section class="landing-content section2">
       <div data-aos="fade-up">
+      
+      <p>Let's the magic carpet bring you to the</p>
+      <div class="theme">
+        <img src="{% static 'images/star.png' %}" />
+        <h1>Whole New World</h1>
+        <img src="{% static 'images/star.png' %}" />
+      </div>
+
+      <div class="mascot">
+        <div class="mascot-image">
+          <img src="{% static 'images/cava.png' %}" alt="Cava" />
+        </div>
+        <div class="mascot-detail">
+          <div class="introduce">
+            <h4>Hi, I'm</h4>
+            <h2>Cava!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo! Quos ullam vitae quisquam labore? Magnam dolores aperiam odit dolorem fugiat ut cumque veritatis? Eum dolor aliquid quasi placeat pariatur.</p>
+          </div>
+        </div>
+      </div>
       <!-- Judul "Timeline" sub title di landing page -->
       <div class="title">
         <img src="{% static 'images/star.png' %}" />
@@ -198,23 +191,4 @@
         <a href="#"><button>Download SOP</button></a>
       </div></div>
     </section>
-  
-
-    <footer>
-      <div class="footer-logo">
-        <img src="{% static 'images/logo_footer.png' %}" alt="logo" />
-      </div>
-      <div class="footer-content">
-        <p>Find us on social media</p>
-        <a href="https://www.instagram.com/kepokedubes/" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-linkedin-square"></i></a>
-        <p>©2021 Kedubes Expo 2022</p>
-      </div>
-    </footer>
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="{% static 'js/countdown.js' %}"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
-  </body>
-</html>
+{% endblock content %}

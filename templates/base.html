@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Kedubes EXPO 2022" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    {% block style %}{% endblock style %}
+    {% block script_top %}{% endblock script_top %}
+    <title>KEPO 2022 | Landing Page</title>
+    <!-- <iframe src="https://g.top4top.io/m_2178ygpor1.mp3&muted=1" allow="autoplay" style="display: none;"></iframe> -->
+  </head>
+  <body onclick="playAudio()" id="body-tag">
+    <div id="nav-wrapper">
+      <nav>
+        <div class="nav-logo">
+          <img src="{% static 'images/logo.png' %}" alt="Kepo 2022" />
+          <h4>Kedubes<br />Expo</h4>
+        </div>
+        <ul>
+          <li>
+            <a href="/info_ptn">Info</a>
+          </li>
+
+          <li>
+            <a href="/merch">Merch</a>
+          </li>
+          <li>
+            <a href="#">About Us</a>
+          </li>
+        </ul>
+        <img style="position:absolute; z-index:98; margin-top: 7rem; width:40px; height: auto;" src="{% static 'images/audio-btn.png' %}" id="audio-icon">
+      </nav>
+      
+    </div>
+    
+
+    {% block content %}
+    {% endblock content %}
+  
+    {% block footer %}
+    <footer>
+      <div class="footer-logo">
+        <img src="{% static 'images/logo_footer.png' %}" alt="logo" />
+      </div>
+      <div class="footer-content">
+        <p>Find us on social media</p>
+        <a href="https://www.instagram.com/kepokedubes/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin-square"></i></a>
+        <p>©2021 Kedubes Expo 2022</p>
+      </div>
+    </footer>
+    {% endblock footer %}
+
+
+    <audio id="mySong">
+      <source src="{% static 'audio/a-whole-new-world.mp3' %}" type="audio/mp3">
+    </audio>
+
+    <script>
+      var mySong = document.getElementById("mySong");
+      var icon = document.getElementById("audio-icon");
+      mySong.volume=0.1;
+      icon.onclick = function(){
+        if(mySong.paused){
+          mySong.play();
+          icon.src = "{% static 'images/audio-btn.png' %}";
+        }else {
+          mySong.pause();
+        }
+      }
+
+      function playAudio(){
+        mySong.play();
+        document.getElementById("body-tag").removeAttribute('onclick');
+      }
+      function stop(){
+        console.log('test');
+      }
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/countdown.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+  </body>
+</html>
