@@ -136,6 +136,7 @@ section.section1 {
   border-radius: 25px;
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
 }
 
 .card-after {
@@ -167,6 +168,9 @@ section.section1 {
   padding: 12px 12px;
   margin: 12px 12px;
 }
+
+.thumbnail-education > img{
+  width: 100%;
 
 .text {
   color: #e5e5e5;
