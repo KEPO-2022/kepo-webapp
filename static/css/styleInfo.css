@@ -192,6 +192,11 @@ section.section1 {
   margin-top: 36px;
 }
 
+.ltmpt button:hover,
+.track button:hover {
+  background-color: #ee4c4f;
+}
+
 .track > img {
   position: absolute;
   transform: translate(0%, -50%);
@@ -210,6 +215,11 @@ section.section1 {
   background-color: #222b54;
   color: #fff;
   font-weight: normal;
+}
+
+.more button:hover,
+.decor-track button:hover {
+  background-color: #36518f;
 }
 
 .more > img {
