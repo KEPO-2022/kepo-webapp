@@ -1,5 +1,5 @@
 const navMenu = document.querySelector("nav ul");
-const icon = document.getElementById("icon");
+const icon2 = document.getElementById("icon");
 
 function change(iconID) {
   if (document.getElementById(iconID).className == "fa fa-ellipsis-h") {
