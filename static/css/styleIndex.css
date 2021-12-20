@@ -15,7 +15,7 @@ body {
 }
 
 /* --Style for nav container-- */
-nav {
+#nav-wrapper > nav {
   width: 90%;
   height: 7vh;
   background-color: #f2f2f2;

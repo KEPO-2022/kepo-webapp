@@ -12,9 +12,10 @@
     {% block style %}{% endblock style %}
     {% block script_top %}{% endblock script_top %}
     <title>KEPO 2022 | Landing Page</title>
+    <!-- <iframe src="https://g.top4top.io/m_2178ygpor1.mp3&muted=1" allow="autoplay" style="display: none;"></iframe> -->
   </head>
-  <body>
-    <div>
+  <body onclick="playAudio()" id="body-tag">
+    <div id="nav-wrapper">
       <nav>
         <div class="nav-logo">
           <img src="{% static 'images/logo.png' %}" alt="Kepo 2022" />
@@ -31,7 +32,8 @@
           <li>
             <a href="#">About Us</a>
           </li>
-        </ul><img style="position:absolute; z-index:98; margin-top: 100px; width:40px; height: auto;" src="{% static 'images/audio-btn.png' %}" id="audio-icon">
+        </ul>
+        <img style="position:absolute; z-index:98; margin-top: 7rem; width:40px; height: auto;" src="{% static 'images/audio-btn.png' %}" id="audio-icon">
       </nav>
       
     </div>
@@ -54,7 +56,8 @@
     </footer>
     {% endblock footer %}
 
-    <audio id="mySong" autoplay>
+
+    <audio id="mySong">
       <source src="{% static 'audio/a-whole-new-world.mp3' %}" type="audio/mp3">
     </audio>
 
@@ -69,6 +72,14 @@
         }else {
           mySong.pause();
         }
+      }
+
+      function playAudio(){
+        mySong.play();
+        document.getElementById("body-tag").removeAttribute('onclick');
+      }
+      function stop(){
+        console.log('test');
       }
     </script>
     
