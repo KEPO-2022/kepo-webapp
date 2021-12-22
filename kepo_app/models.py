@@ -21,7 +21,7 @@ class Article(models.Model):
     title = models.CharField(max_length=200, unique=True)
     thumbnail = models.ImageField(upload_to='images/thumbnail/')
     content = models.TextField()
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=True, max_length=300)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)

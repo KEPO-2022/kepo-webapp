@@ -2,48 +2,19 @@
 {% load static %}
 
 {% block style %}
-<link rel="stylesheet" href="{% static 'css/styleInfo.css' %}" />
+<link rel="stylesheet" href="{% static 'css/styleArticle.css' %}" />
 {% endblock style %}
 
 {% block content %}
-
     <section>
       <div class="article">
         <img src="{% static 'images/cava-track-record.png' %}" alt="cava" />
         <div class="title">
           <h4>Kepo Info</h4>
-          <h1>Jalur SNMPTN</h1>
+          <h1>{{article.title}}</h1>
         </div>
         <div class="content">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta doloribus voluptas eaque quia aliquam esse odio numquam asperiores repudiandae error repellendus, necessitatibus, deserunt eligendi! Facilis repellendus nihil eum
-            eius qui?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut deleniti necessitatibus officiis porro? Eum repudiandae id, repellendus soluta perspiciatis temporibus vero, dicta modi obcaecati esse, nisi cum et illo
-            doloremque!.
-            <br />
-            <br />
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sequi accusamus recusandae facere perspiciatis, similique alias? Expedita eius nemo assumenda eveniet vel et, consequatur incidunt repudiandae magni quam tempore
-            quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quia quidem. Beatae aliquid esse, unde inventore qui porro iusto natus nobis consequatur delectus corrupti alias. Accusantium corrupti earum pariatur
-            labore! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, voluptate culpa corrupti maiores voluptates cum et neque, saepe amet rerum fugiat iste error dicta, omnis accusantium est? Cumque, iusto inventore.
-            <br />
-            <br />
-
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quis illo provident consequatur soluta perspiciatis amet molestias, autem sed quas ex quidem expedita dolorum nemo sunt? Quibusdam repudiandae distinctio
-            repellendus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia perferendis iure repellat facere architecto. Dolores rerum exercitationem nesciunt recusandae excepturi fuga voluptatibus nobis natus unde nisi! Quae
-            voluptatum eligendi itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et consequuntur enim magnam harum totam cupiditate, sequi libero sint nihil exercitationem repellat labore eos possimus, quia ducimus amet
-            neque nemo? Ab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sequi accusamus recusandae facere perspiciatis, similique alias? Expedita eius nemo assumenda eveniet vel et, consequatur incidunt repudiandae magni
-            quam tempore quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quia quidem. Beatae aliquid esse, unde inventore qui porro iusto natus nobis consequatur delectus corrupti alias. Accusantium corrupti earum
-            pariatur labore! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, voluptate culpa corrupti maiores voluptates cum et neque, saepe amet rerum fugiat iste error dicta, omnis accusantium est? Cumque, iusto
-            inventore.
-            <br />
-            <br />
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sequi accusamus recusandae facere perspiciatis, similique alias? Expedita eius nemo assumenda eveniet vel et, consequatur incidunt repudiandae magni quam tempore
-            quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quia quidem. Beatae aliquid esse, unde inventore qui porro iusto natus nobis consequatur delectus corrupti alias. Accusantium corrupti earum pariatur
-            labore! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, voluptate culpa corrupti maiores voluptates cum et neque, saepe amet rerum fugiat iste error dicta, omnis accusantium est? Cumque, iusto inventore.
-            <br />
-            <br />
-          </p>
+          {{article.content | safe}}
         </div>
       </div>
     </section>

@@ -66,7 +66,7 @@ class ArticleView(View):
             ctx['article'] = article
         except Article.DoesNotExist:
             ctx['article'] = None
-        return render(request, 'view_article.html', context=ctx)
+        return render(request, 'article.html', context=ctx)
         
 class MerchView(View):
     def get(self, request):
