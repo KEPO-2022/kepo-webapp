@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{% static 'css/styleAbout.css' %}" />
+    <title>About Us</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <img src="{% static 'images/logo.png' %}" alt="Kepo 2022" />
+        <h4>
+          <a href="index.html"> Kedubes<br />Expo</a>
+        </h4>
+      </div>
+      <ul>
+        <li>
+          <a href="infoptn.html">Info PT</a>
+        </li>
+
+        <li>
+          <a href="#">Merch</a>
+        </li>
+
+        <li>
+          <a href="about.html">About Us</a>
+        </li>
+      </ul>
+      <div class="menu-toggle" onclick="showMenu(); change('icon')">
+        <p><i class="fa fa-ellipsis-h" id="icon"></i></p>
+      </div>
+    </nav>
+
+    <section class="section-top">
+      <div class="title">
+        <h1>About Us</h1>
+      </div>
+
+      <div class="slide-about">
+        <!-- Full-width images with number and caption text -->
+        <div class="carousel fade">
+          <div class="text">
+            <h2>Our Event</h2>
+            <p>
+              Kedubes Expo 2022 atau biasa disingkat KEPO adalah acara tahunan yang menjadi sarana pemberian informasi kepada siswa/i SMAN 12 Jakarta terkait berbagai program studi di perguruan tinggi. Kedubes Expo 2022 bertujuan memudahkan
+              dalam menentukan pilihan masa depan untuk ke jenjang berikutnya diselenggarakan oleh Alumni SMAN 12 Jakarta.
+            </p>
+            <br/>
+            <br/>
+            <br/>
+          </div>
+        </div>
+
+        <div class="carousel fade">
+          <div class="text">
+            <h2>Our Goals</h2>
+            <ul>
+              <li>Memberikan pengetahuan mengenai fakultas/jurusan/program studi di perguruan tinggi kepada siswa siswi SMAN 12 Jakarta;</li>
+              <li>Memperkenalkan atau sebagai introduksi tentang kehidupan perkuliahan kepada siswa siswi SMAN 12 Jakarta;</li>
+              <li>Memberi pengetahuan tentang tahapan dan motivasi mengenai berbagai jalur masuk perguruan tinggi;</li>
+              <li>Memberi pengetahuan tentang kompetensi (soft skill dan hard skill) yang perlu dimiliki mahasiswa di perguruan tinggi;</li>
+              <li>Membantu siswa siswi SMAN 12 Jakarta dalam menentukan jurusan.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="carousel fade">
+          <div class="text">
+            <h2>Our Theme</h2>
+            <p>
+              Kedubes Expo tahun ini mengangkat tema "Let your magic carpet bring you to the whole new world" yang terinspirasi dari film disney “Aladdin”. Tema tersebut menggambarkan bahwa KEPO 2022 merupakan sebuah sarana yang akan
+              memberikan gambaran kepada siswa/i SMAN 12 Jakarta mengenai kehidupan baru yang akan mereka lalui di jenjang selanjutnya yaitu dunia perkuliahan
+            </p>
+            <br/>
+            <br/>
+            <br/>
+          </div>
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="nextSlides(-1)">&#10094;</a>
+        <a class="next" onclick="nextSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <!-- The dots/circles -->
+      <div style="text-align: center">
+        <span class="dot" onclick="activeSlide(1)"></span>
+        <span class="dot" onclick="activeSlide(2)"></span>
+        <span class="dot" onclick="activeSlide(3)"></span>
+      </div>
+    </section>
+
+    <section>
+      <div class="title">
+        <h1>Meet The Team</h1>
+      </div>
+      <div class="slide-container">
+        <div class="mySlide">
+          <img class="mySlides1 fade" src="{% static 'images/projectleader-1.png' %}" alt="" />
+          <img class="mySlides1 fade" src="{% static 'images/projectleader-2.png' %}" alt="" />
+          <img class="mySlides1 fade" src="{% static 'images/projectleader-3.png' %}" alt="" />
+          <img class="mySlides1 fade" src="{% static 'images/projectleader-4.png' %}" alt="" />
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusDivs(-1,0)">&#10094;</a>
+          <a class="next" onclick="plusDivs(1,0)">&#10095;</a>
+        </div>
+        <div class="mySlide">
+          <img class="mySlides2 fade" src="{% static 'images/event-1.png' %}" alt="" />
+          <img class="mySlides2 fade" src="{% static 'images/event-2.png' %}" alt="" />
+          <img class="mySlides2 fade" src="{% static 'images/event-3.png' %}" alt="" />
+          <img class="mySlides2 fade" src="{% static 'images/event-4.png' %}" alt="" />
+          <a class="prev" onclick="plusDivs(-1,1)">&#10094;</a>
+          <a class="next" onclick="plusDivs(1,1)">&#10095;</a>
+        </div>
+        <div class="mySlide">
+          <img class="mySlides3 fade" src="{% static 'images/fundraising-1.png' %}" alt="" />
+          <img class="mySlides3 fade" src="{% static 'images/fundraising-2.png' %}" alt="" />
+          <a class="prev" onclick="plusDivs(-1,2)">&#10094;</a>
+          <a class="next" onclick="plusDivs(1,2)">&#10095;</a>
+        </div>
+        <div class="mySlide">
+          <img class="mySlides4 fade" src="{% static 'images/operational-1.png' %}" alt="" />
+          <img class="mySlides4 fade" src="{% static 'images/operational-2.png' %}" alt="" />
+          <img class="mySlides4 fade" src="{% static 'images/operational-3.png' %}alt="" />
+          <a class="prev" onclick="plusDivs(-1,3)">&#10094;</a>
+          <a class="next" onclick="plusDivs(1,3)">&#10095;</a>
+        </div>
+        <div class="mySlide">
+          <img class="mySlides5 fade" src="{% static 'images/creative-1.png' %}" alt="" />
+          <img class="mySlides5 fade" src="{% static 'images/creative-2.png' %}" alt="" />
+          <img class="mySlides5 fade" src="{% static 'images/creative-3.png' %}" alt="" />
+          <a class="prev" onclick="plusDivs(-1,4)">&#10094;</a>
+          <a class="next" onclick="plusDivs(1,4)">&#10095;</a>
+        </div>
+        <div class="mySlide">
+          <img class="mySlides6 fade" src="{% static 'images/communication-1.png' %}" alt="" />
+          <img class="mySlides6 fade" src="{% static 'images/communication-2.png' %}" alt="" />
+          <img class="mySlides6 fade" src="{% static 'images/communication-3.png' %}" alt="" />
+          <img class="mySlides6 fade" src="{% static 'images/communication-4.png' %}" alt="" />
+          <a class="prev" onclick="plusDivs(-1,5)">&#10094;</a>
+          <a class="next" onclick="plusDivs(1,5)">&#10095;</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-logo">
+        <img src="{% static 'images/logo_footer.png' %}" alt="logo" />
+      </div>
+      <div class="footer-content">
+        <p>Find us on social media</p>
+        <a href="https://www.instagram.com/kepokedubes/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin-square"></i></a>
+        <p>©2021 Kedubes Expo 2022</p>
+      </div>
+    </footer>
+
+    <script src="{% static 'js/navbar.js' %}"></script>
+    <script src="{% static 'js/about_slider.js' %}"></script>
+    <script src="{% static 'js/team_slider.js' %}"></script>
+  </body>
+</html>
