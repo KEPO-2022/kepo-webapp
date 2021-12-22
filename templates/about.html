@@ -39,6 +39,8 @@
       </div>
       <img style="position:absolute; z-index:98; margin-top: 7rem; width:40px; height: auto;" src="{% static 'images/audio-btn.png' %}" id="audio-icon">
     </nav>
+    
+    
 
     <section class="section-top">
       <div class="title">
@@ -151,7 +153,11 @@
         </div>
       </div>
     </section>
-
+                                                 
+    {% block content %}
+    {% endblock content %}
+  
+    {% block footer %}                                             
     <footer>
       <div class="footer-logo">
         <img src="{% static 'images/logo_footer.png' %}" alt="logo" />
@@ -163,6 +169,7 @@
         <p>©2021 Kedubes Expo 2022</p>
       </div>
     </footer>
+    {% endblock footer %}                                                
 
     <script src="{% static 'js/navbar.js' %}"></script>
     <script src="{% static 'js/about_slider.js' %}"></script>
