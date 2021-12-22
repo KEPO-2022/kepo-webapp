@@ -16,7 +16,7 @@
         <div class="card">
           <a href="{% url 'article' article.slug %}">
             <div class="thumbnail">
-              <img src="../media/{{article.thumbnail}}" alt="thumbnail" />
+              <img src="{{article.thumbnail.url}}" alt="thumbnail" />
             </div>
             <div class="text">
               <h4>{{article.title}}</h4>
@@ -129,7 +129,7 @@
         <div class="card">
           <a href="{%url 'article' article.slug %}" target="_blank">
             <div class="thumbnail-education">
-              <img src="../media/{{article.thumbnail}}" alt="thumbnail" />
+              <img src="{{article.thumbnail.url}}" alt="thumbnail" />
             </div>
             <div class="text">
               <h4>{{article.title}}</h4>

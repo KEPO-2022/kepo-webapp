@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
+from cloudinary.models import CloudinaryField
 
 class Category(models.Model):
     name = models.CharField(max_length=128, unique=True)
@@ -19,7 +20,7 @@ class Category(models.Model):
 class Article(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=200, unique=True)
-    thumbnail = models.ImageField(upload_to='images/thumbnail/')
+    thumbnail = CloudinaryField('thumbnail')
     content = models.TextField()
     slug = models.SlugField(unique=True, max_length=300)
 
