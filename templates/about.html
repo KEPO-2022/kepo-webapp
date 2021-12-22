@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="{% static 'css/styleAbout.css' %}" />
+    {% block style %}{% endblock style %}
+    {% block script_top %}{% endblock script_top %}
     <title>About Us</title>
   </head>
   <body>
@@ -34,6 +37,7 @@
       <div class="menu-toggle" onclick="showMenu(); change('icon')">
         <p><i class="fa fa-ellipsis-h" id="icon"></i></p>
       </div>
+      <img style="position:absolute; z-index:98; margin-top: 7rem; width:40px; height: auto;" src="{% static 'images/audio-btn.png' %}" id="audio-icon">
     </nav>
 
     <section class="section-top">
