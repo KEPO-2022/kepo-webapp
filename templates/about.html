@@ -1,47 +1,11 @@
+{% extends 'base.html' %} 
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="{% static 'css/styleAbout.css' %}" />
-    {% block style %}{% endblock style %}
-    {% block script_top %}{% endblock script_top %}
-    <title>About Us</title>
-  </head>
-  <body>
-    <nav>
-      <div class="nav-logo">
-        <img src="{% static 'images/logo.png' %}" alt="Kepo 2022" />
-        <h4>
-          <a href="index.html"> Kedubes<br />Expo</a>
-        </h4>
-      </div>
-      <ul>
-        <li>
-          <a href="infoptn.html">Info PT</a>
-        </li>
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/styleAbout.css' %}" />
+{% endblock style %}
 
-        <li>
-          <a href="merch.html">Merch</a>
-        </li>
-
-        <li>
-          <a href="about.html">About Us</a>
-        </li>
-      </ul>
-      <div class="menu-toggle" onclick="showMenu(); change('icon')">
-        <p><i class="fa fa-ellipsis-h" id="icon"></i></p>
-      </div>
-      <img style="position:absolute; z-index:98; margin-top: 7rem; width:40px; height: auto;" src="{% static 'images/audio-btn.png' %}" id="audio-icon">
-    </nav>
-    
-    
-
+{% block content %}
     <section class="section-top">
       <div class="title">
         <h1>About Us</h1>
@@ -153,26 +117,6 @@
         </div>
       </div>
     </section>
-                                                 
-    {% block content %}
-    {% endblock content %}
-  
-    {% block footer %}                                             
-    <footer>
-      <div class="footer-logo">
-        <img src="{% static 'images/logo_footer.png' %}" alt="logo" />
-      </div>
-      <div class="footer-content">
-        <p>Find us on social media</p>
-        <a href="https://www.instagram.com/kepokedubes/" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-linkedin-square"></i></a>
-        <p>©2021 Kedubes Expo 2022</p>
-      </div>
-    </footer>
-    {% endblock footer %}                                                
-
-    <script src="{% static 'js/navbar.js' %}"></script>
-    <script src="{% static 'js/about_slider.js' %}"></script>
-    <script src="{% static 'js/team_slider.js' %}"></script>
-  </body>
-</html>
+<script src="{% static 'js/about_slider.js' %}"></script>
+<script src="{% static 'js/team_slider.js' %}"></script>
+{% endblock content %}

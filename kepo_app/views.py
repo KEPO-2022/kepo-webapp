@@ -88,3 +88,7 @@ class AdminLoginView(View):
                 return render(request, 'admin_login.html', {})
         else:
             return render(request, 'admin_login.html', {})
+
+class AboutView(View):
+    def get(self, request):
+        return render(request, 'about.html', {})

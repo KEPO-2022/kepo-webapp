@@ -18,13 +18,14 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from kepo_app.views import IndexView, InfoPtnView, InfoPtnEdit, AdminLoginView, ArticleView, MerchView
+from kepo_app.views import IndexView, InfoPtnView, InfoPtnEdit, AdminLoginView, ArticleView, MerchView, AboutView
 
 urlpatterns = [
     path('', IndexView.as_view(), name="index"),
     path('info_ptn/', InfoPtnView.as_view(), name="info_ptn"),
     path('info_ptn_edit/', InfoPtnEdit.as_view(), name="info_ptn_edit"),
     path('admin_login/', AdminLoginView.as_view(), name="admin_login"),
+    path('about/', AboutView.as_view(), name="about"),
     path('article/<slug:article_slug>', ArticleView.as_view(), name="article"),
     path('merch/', MerchView.as_view(), name="merch"),
     path('admin/', admin.site.urls),
