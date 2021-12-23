@@ -460,4 +460,14 @@ footer {
   .decor-track {
     margin-top: 36px;
   }
+  
+  .decor-track {
+    order: 1;
+    -webkit-order: 1;
+  }
+
+  .track-record {
+    order: 2;
+    -webkit-order: 2;
+  }
 }
