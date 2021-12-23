@@ -178,6 +178,9 @@ section.section1 {
 }
 
 .text {
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
   color: #e5e5e5;
   background-image: linear-gradient(to bottom right, #36518f, #5d85e1);
   text-align: left;
