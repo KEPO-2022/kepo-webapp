@@ -186,6 +186,12 @@ section.section1 {
   border-bottom-right-radius: 25px;
 }
 
+.text > h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .ltmpt,
 .track {
   margin: 10vh 0;
