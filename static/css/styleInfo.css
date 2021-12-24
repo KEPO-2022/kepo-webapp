@@ -178,12 +178,21 @@ section.section1 {
 }
 
 .text {
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
   color: #e5e5e5;
   background-image: linear-gradient(to bottom right, #36518f, #5d85e1);
   text-align: left;
   padding: 12px 24px;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
+}
+
+.text > h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .ltmpt,
@@ -224,11 +233,12 @@ section.section1 {
   font-family: Poppins;
   cursor: pointer;
   margin-top: 36px;
+  transition: background-color 0.5s ease;
 }
 
 .ltmpt button:hover,
 .track button:hover {
-  background-color: #ee4c4f;
+  background-color: #f1bcae;
 }
 
 .track > img {
@@ -249,6 +259,7 @@ section.section1 {
   background-color: #222b54;
   color: #fff;
   font-weight: normal;
+  transition: background-color 0.5s ease;
 }
 
 .more button:hover,
@@ -459,5 +470,15 @@ footer {
   .more,
   .decor-track {
     margin-top: 36px;
+  }
+  
+  .decor-track {
+    order: 1;
+    -webkit-order: 1;
+  }
+
+  .track-record {
+    order: 2;
+    -webkit-order: 2;
   }
 }
