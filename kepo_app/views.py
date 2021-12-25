@@ -65,6 +65,15 @@ class EditArticleView(View):
     def get(self, request, article_slug):
         ctx = {}
         try:
+            if request.GET['delarticle_id']:
+                article_id = request.GET['delarticle_id']
+                article = Article.objects.get(id=article_id)
+                article.delete()
+                ctx_dict = {}
+                return HttpResponseRedirect(reverse('info_ptn'))
+        except: 
+            pass
+        try:
             article = Article.objects.get(slug=article_slug)
             ctx['article'] = article
         except Article.DoesNotExist:

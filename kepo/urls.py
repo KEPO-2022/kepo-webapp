@@ -24,6 +24,7 @@ urlpatterns = [
     path('', IndexView.as_view(), name="index"),
     path('info_ptn/', InfoPtnView.as_view(), name="info_ptn"),
     path('article/<slug:article_slug>/edit/', EditArticleView.as_view(), name="edit_article"),
+    path('article/<slug:article_slug>/delete/', EditArticleView.as_view(), name="delete_article"),
     path('add_article/', AddArticleView.as_view(), name="add_article"),
     path('admin_login/', AdminLoginView.as_view(), name="admin_login"),
     path('logout/', LogoutView.as_view(), name="logout"),
