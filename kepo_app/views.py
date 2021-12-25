@@ -7,6 +7,8 @@ from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.admin.views.decorators import staff_member_required
 from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import login_required, user_passes_test
+from django.shortcuts import redirect
 
 # Create your views here.
 class IndexView(View):
@@ -34,7 +36,7 @@ class InfoPtnView(View):
     #     cat = Category.objects.all()
     #     return render(request, 'info_ptn.html', {'form': form, 'category_list': cat})
 
-class InfoPtnEdit(View):
+class AddArticleView(View):
     @method_decorator(staff_member_required(redirect_field_name='', login_url='index'))
     def get(self, request):
         form = ArticleForm()
@@ -56,7 +58,48 @@ class InfoPtnEdit(View):
                 article.save()
         else:
             print(form.errors)
-        return HttpResponseRedirect(reverse('info_ptn_edit'))
+        return HttpResponseRedirect(reverse('add_article'))
+
+class EditArticleView(View):
+    @method_decorator(staff_member_required(redirect_field_name='', login_url='index'))
+    def get(self, request, article_slug):
+        ctx = {}
+        try:
+            article = Article.objects.get(slug=article_slug)
+            ctx['article'] = article
+        except Article.DoesNotExist:
+            ctx['article'] = None
+        form = ArticleForm()
+        category_list = Category.objects.all()
+        ctx['form'] = form
+        ctx['category_list'] = category_list
+        return render(request, 'edit_article.html', context=ctx)
+
+    @method_decorator(staff_member_required(redirect_field_name='', login_url='index'))
+    def post(self, request, article_slug):
+        id = request.POST.get('cat')
+        try:
+            category = Category.objects.get(id=int(id))
+        except:
+            category= None
+        article = Article.objects.get(slug=article_slug)
+        form = ArticleForm(request.POST, request.FILES, instance=article)
+        is_thumbnail = request.FILES.get('thumbnail')
+        thumbnail = article.thumbnail
+        if form.is_valid() and is_thumbnail != None:
+            if category:
+                article = form.save(commit=False)
+                article.category = category
+                article.save()
+        elif is_thumbnail == None:
+            article = form.save(commit=False)
+            article.category = category
+            article.thumbnail = thumbnail
+            article.save()
+            print(article.thumbnail)
+        else:
+            print(form.errors)
+        return HttpResponseRedirect(reverse('edit_article', args=(article_slug,)))
 
 class ArticleView(View):
     def get(self, request, article_slug):
@@ -88,6 +131,12 @@ class AdminLoginView(View):
                 return render(request, 'admin_login.html', {})
         else:
             return render(request, 'admin_login.html', {})
+
+class LogoutView(View):
+    @method_decorator(staff_member_required)
+    def get(self, request):
+        logout(request)
+        return HttpResponseRedirect(reverse('index'))
 
 class AboutView(View):
     def get(self, request):

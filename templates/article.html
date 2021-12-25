@@ -7,6 +7,9 @@
 
 {% block content %}
     <section>
+      {% if user.is_staff %}
+        <span><a href="{% url 'edit_article' article.slug %}">Edit</a></span>
+      {% endif %}
       <div class="article">
         <img src="{% static 'images/cava-track-record.png' %}" alt="cava" />
         <div class="title">

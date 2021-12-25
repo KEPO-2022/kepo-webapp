@@ -10,6 +10,9 @@
       <div class="title">
         <img src="{% static 'images/star.png' %}" />
         <h2>Jalur Masuk PTN</h2>
+        {% if user.is_staff %}
+        <p><a href="/add_article">Add article</a></p>
+        {% endif %}
       </div>
       <div class="wrapper">
         {% for article in jalur_masuk_ptn %}
