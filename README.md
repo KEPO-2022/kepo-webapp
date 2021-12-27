@@ -22,9 +22,9 @@ Reserves for more informations.
 Klien dalam proyek website Kedubes Expo 2022 adalah mahasiswa yang merupakan alumni SMAN 12 Jakarta yang saat ini menjadi panitia dalam kegiatan atau acara dengan nama sama yaitu Kedubes Expo (KEPO) 2022.
 
 # Team Member
-1. [Aditya Shiva Al-Hakim](https://github.com/Lawytel) 1313620023
-2. [Ahmad Bisri Mustofa](https://github.com/Abim29) 1313620026
-3. [Muchsin Ali](https://github.com/MuchsinA08) 1313620012
+1. [Aditya Shiva Al-Hakim](https://github.com/Lawytel) 1313620023 - Back-end Funcionality, Merch Page Front-end
+2. [Ahmad Bisri Mustofa](https://github.com/Abim29) 1313620026 - Landing Page Front-end, Info Page Front-end
+3. [Muchsin Ali](https://github.com/MuchsinA08) 1313620012 - About Us Page Front-end, Dokumentasi Meet
 
 # DEMO
 Untuk melihat demo penggunaan dari fitur yang ada di dalam website Kedubes Expo (KEPO) 2022 dapat dilihat pada halaman berikut:<br>
