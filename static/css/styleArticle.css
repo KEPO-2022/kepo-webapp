@@ -20,7 +20,7 @@ body {
 
 
 /* Styling Navbar */
-nav {
+#nav-wrapper > nav {
   width: 90%;
   height: 7vh;
   background-color: #f2f2f2;
@@ -63,13 +63,17 @@ nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
+  width: 20%;
   list-style: none;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #222b54;
+}
+
+.menu-toggle {
+  display: none;
 }
 /* Akhir Navbar */
 
@@ -149,7 +153,21 @@ footer {
 }
 /* Akhir bagian Footer */
 
+@media screen and (max-width: 1072px) {
+  nav ul {
+    width: 30%;
+  }
+}
+
 @media screen and (max-width: 918px) {
+   nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    list-style: none;
+  }
+  
   footer {
     height: auto;
     flex-direction: column;
@@ -180,8 +198,53 @@ footer {
   }
 
   nav ul {
-    width: 50%;
-    font-size: 0.6rem;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #222b54;
+    top: -50%;
+    right: -110%;
+    opacity: 0;
+    width: 75vw;
+    height: 100vh;
+    padding-top: 40vh;
+    box-sizing: border-box;
+    z-index: -1;
+    transition: all 0.5s ease;
+  }
+
+  nav ul.responsive {
+    opacity: 1;
+    right: -10%;
+  }
+
+  nav ul li {
+    width: 100%;
+    padding: 2.5vh 0;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  nav ul li a {
+    color: #f2f2f2;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    background-image: linear-gradient(to bottom, #3c78af, #a6b8bc);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .menu-toggle > p {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
   }
 
   .content {
