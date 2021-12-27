@@ -9,12 +9,12 @@ A repository for Web Application
 
 # Description
 Website KEPO 2022 merupakan website yang dibuat untuk menunjang kesuksesan acara/kegiatan Kedubes Expo 2022. Website ditujukan untuk menyediakan informasi kepada siswa/i SMAN 12 Jakarta yang ingin melanjutkan pendidikannya ke perguruan tinggi negeri maupun swasta. Informasi yang disediakan berupa informasi terkait jalur masuk perguruan tinggi negeri, beasiswa, pengalaman, dan sebagainya terkait perguruan tinggi yang akan disampaikan oleh alumni SMAN 12 Jakarta.
-<br><br>
 
 Website KEPO 2022 terbagi menjadi halaman utama, halaman info, halaman merch, dan halaman about. Fitur utama dari website ini adalah CRUD artikel pada halaman info, di mana terdapat akses admin untuk membuat, mengubah/edit, serta menghapus konten artikel pada halaman info. Dengan fitur ini, klien kami akan dengan mudah mengatur konten-konten pada halaman info yang nantinya akan dilihat dan dibaca oleh para peserta kegiatan Kedubes Expo 2022. Terdapat fitur lainnya juga seperti Countdown Acara pada halaman utama serta background music yang ada pada setiap halamannya dan dapat diaktifkan atau dinonaktifkan sesuai preferensi pengguna.
-<br><br>
 
 Website KEPO 2022 ini juga diharapkan oleh klien kami dapat menjadi arsip kegiatan. Selain itu, website ini juga dapat menjadi salah satu pemicu agar kegiatan serupa setelahnya dapat berjalan lebih baik lagi dari yang sebelumnya.
+
+Proyek website KEPO 2022 ini telah dibuat konsep design dan mockupnya oleh panitia kegiatan Kedubes Expo 2022. Sehingga kami membuat proyek website ini berdasarkan design dan arahan yang diberikan oleh panitia berdasarkan hasil diskusi antar sesama panitia kegiatan dan panitia dengan kami selaku penyedia jasa pembuatan web dalam proyek kali ini.
 
 Reserves for more informations.
 
