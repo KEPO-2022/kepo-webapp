@@ -24,7 +24,7 @@ Klien dalam proyek website Kedubes Expo 2022 adalah mahasiswa yang merupakan alu
 # Team Member
 1. [Aditya Shiva Al-Hakim](https://github.com/Lawytel) 1313620023 - Back-end Funcionality, Merch Page Front-end
 2. [Ahmad Bisri Mustofa](https://github.com/Abim29) 1313620026 - Landing Page Front-end, Info Page Front-end
-3. [Muchsin Ali](https://github.com/MuchsinA08) 1313620012 - About Us Page Front-end, Dokumentasi Meet
+3. [Muchsin Ali Rasyidin](https://github.com/MuchsinA08) 1313620012 - About Us Page Front-end, Dokumentasi Meet
 
 # DEMO
 Untuk melihat demo penggunaan dari fitur yang ada di dalam website Kedubes Expo (KEPO) 2022 dapat dilihat pada halaman berikut:<br>
