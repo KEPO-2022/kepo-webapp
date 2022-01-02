@@ -174,8 +174,10 @@ section.section1 {
 }
 
 .thumbnail-education > img{
+  object-fit: cover;
   width: 100%;
-  max-height: 374.1px;
+  max-height: 375px;
+  
 }
 
 .text {
