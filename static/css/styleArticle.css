@@ -115,6 +115,14 @@ section {
   margin-top: 24px;
   font-size: 0.9rem;
 }
+
+iframe{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 560px;
+  height: 315px;
+}
 /* Akhir Styling Section */
 
 /* Footer */
@@ -192,6 +200,13 @@ footer {
   }
 }
 
+@media screen and (max-width: 768px) {
+  iframe{
+    width: 336px;
+    height: 189px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .nav-logo h4 {
     font-size: 0.8rem;
@@ -250,4 +265,8 @@ footer {
   .content {
     font-size: 0.6rem;
   }
+  
+  iframe{
+    width: 224px;
+    height: 126px;
 }
