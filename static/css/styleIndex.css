@@ -281,7 +281,7 @@ img.cr-3 {
   position: absolute;
   top: 7.5%;
   left: 50%;
-  height: 55vh;
+  height: 35vh;
   padding-top: 28px;
 }
 
@@ -291,7 +291,7 @@ img.cr-3 {
   top: 10%;
   left: 50%;
   transform: translate(-43%, 0%);
-  height: 60vh;
+  height: 40vh;
   flex-direction: column;
   justify-content: space-evenly;
 }
@@ -304,7 +304,7 @@ img.cr-3 {
   list-style: none;
   margin: 10vh 0;
   width: 40vw;
-  height: 57vh;
+  height: 32vh;
 }
 
 .timeline-content ul li {
