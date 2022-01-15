@@ -230,4 +230,28 @@
         </div>
       </div>
     </section>
+
+    <section>
+      <div class="title">
+        <img src="assets/star.png" />
+        <h2>Video Jurusan</h2>
+      </div>
+      <div class="wrapper">
+        {% for article in video_jurusan %}
+        <div class="card">
+          <a href="{% url 'article' article.slug %}" target="_blank">
+            <div class="thumbnail-education">
+              <img src="{{article.thumbnail.url}}" alt="thumbnail" />
+            </div>
+            <div class="text">
+              <h4>{{article.title}}</h4>
+            </div>
+            <div class="card-after">
+              <h1>Baca Detail</h1>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
 {% endblock content %}
