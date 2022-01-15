@@ -116,13 +116,13 @@ section {
   font-size: 0.9rem;
 }
 
-iframe{
+/* iframe{
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   width: 560px;
   height: 315px;
-}
+} */
 /* Akhir Styling Section */
 
 /* Footer */
@@ -202,8 +202,8 @@ footer {
 
 @media screen and (max-width: 768px) {
   iframe{
-    width: 336px;
-    height: 189px;
+    width: 336px !important;
+    height: 189px !important;
   }
 }
 
@@ -267,6 +267,7 @@ footer {
   }
   
   iframe{
-    width: 224px;
-    height: 126px;
+    width: 224px !important;
+    height: 126px !important;
+  }
 }
