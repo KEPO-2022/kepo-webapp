@@ -20,9 +20,11 @@ class InfoPtnView(View):
         ctx = {}
         article_list_konten_edukatif = Article.objects.filter(category__name='Konten Edukatif')
         article_list_jalur_masuk_ptn = Article.objects.filter(category__name='Jalur Masuk PTN')
+        article_list_video_jurusan = Article.objects.filter(category__name='Video Jurusan')
         # article_list = Article.objects.get()
         ctx['konten_edukatif'] = article_list_konten_edukatif
         ctx['jalur_masuk_ptn'] = article_list_jalur_masuk_ptn
+        ctx['video_jurusan'] = article_list_video_jurusan
         return render(request, 'infoptn.html', ctx)
     
     # def post(self, request):
