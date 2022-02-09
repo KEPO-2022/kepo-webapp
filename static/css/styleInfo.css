@@ -336,6 +336,10 @@ footer {
     width: 20vw;
   }
   
+  .track button{
+    margin-top: 12px;
+  }
+  
   footer {
     height: auto;
     flex-direction: column;
